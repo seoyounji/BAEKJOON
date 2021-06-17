@@ -100,20 +100,24 @@ public class prob13913 {
 		int N = sc.nextInt();
 		int K = sc.nextInt();
 		
+		StringBuilder sb = new StringBuilder();
+		
 		if(N > K) {
 			System.out.println(N-K);
 			ArrayList<Integer> result = DOWN(N,K);
 			for (int i = 0; i < result.size(); i++) {
-				System.out.print(result.get(i)+" ");
+				sb.append(result.get(i)+" ");
 			}
 		}
 		else {
 			ArrayList<Integer> result = BFS(N,K);
 			System.out.println(time);
 			for (int i = 0; i < result.size(); i++) {
-				System.out.print(result.get(i)+" ");
+				sb.append(result.get(i)+" ");
 			}			
 		}
+		
+		System.out.println(sb.toString());
 	}
 
 }
